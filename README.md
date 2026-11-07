@@ -30,13 +30,13 @@ npx skills add youmeng96/codex-skill-mentor -a codex
 ### 方式二：手动安装
 
 ```bash
-git clone https://github.com/youmeng96/youmeng96/codex-skill-mentor.git ~/.codex/skills/codex-skill-mentor
+git clone https://github.com/youmeng96/codex-skill-mentor.git ~/.codex/skills/codex-skill-mentor
 ```
 
 Windows PowerShell：
 
 ```powershell
-git clone https://github.com/youmeng96/youmeng96/codex-skill-mentor.git "$HOME\.codex\skills\codex-skill-mentor"
+git clone https://github.com/youmeng96/codex-skill-mentor.git "$HOME\.codex\skills\codex-skill-mentor"
 ```
 
 安装后重新打开 Codex 任务，让 Skill 被重新扫描。

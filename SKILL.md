@@ -6,7 +6,7 @@ description: |
 metadata:
   author: "Codex Skill Mentor Contributors"
   version: "0.1.0"
-  repository: "https://github.com/youmeng96/"
+  repository: "https://github.com/youmeng96/codex-skill-mentor"
 ---
 
 # Skill 教练
@@ -127,7 +127,7 @@ metadata:
 1. 结构验证通过。
 2. 三个真实请求完成前向测试。
 3. 干净环境安装通过。
-4. README 没有 `youmeng96`、`TODO`、空仓库地址等占位符。
+4. README 没有未替换的用户名、TODO、空仓库地址等占位符。
 5. 版本号、CHANGELOG、许可证和来源归属一致。
 6. 用户明确授权创建公开仓库、标签或 Release。
 
