@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Skill Mentor">
+  <rect width="256" height="256" rx="64" fill="#0F766E"/>
+  <path d="M62 70h132v104H133l-38 30v-30H62z" fill="#F0FDFA"/>
+  <path d="M90 104h76M90 132h50" stroke="#0F766E" stroke-width="12" stroke-linecap="round"/>
+</svg>

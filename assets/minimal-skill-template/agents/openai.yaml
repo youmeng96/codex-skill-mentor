@@ -1,0 +1,7 @@
+interface:
+  display_name: "Example Skill"
+  short_description: "一句话说明这个 Skill 的用途"
+  default_prompt: "Use $example-skill to complete this task."
+
+policy:
+  allow_implicit_invocation: true
