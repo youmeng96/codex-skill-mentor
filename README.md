@@ -1,10 +1,16 @@
 # Codex Skill Mentor
 
-> 零基础做出第一个能被 Codex 正确发现、执行、验证和发布的 Skill。
+[English](README_EN.md)
+
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-green)](https://agentskills.io)
+
+> 零基础做出第一个能被目标 AI runtime 正确发现、执行、验证和发布的 Skill。
 
 ![Skill 教练预览](assets/hero-preview.png)
 
 `codex-skill-mentor` 是一个原创的「Skill 教练」。它不一次性倾倒课程，而是先诊断你的真实任务，再带你完成最小可运行版本，最后用真实请求验证并发布到 GitHub。
+
+它使用开放的 Agent Skills 结构，可用于 Codex、Claude Code、Cursor、OpenClaw、DeepSeek Harness 等兼容 runtime。
 
 ## English Summary
 
@@ -21,11 +27,25 @@ A project-based Codex skill mentor for beginners. It diagnoses a real task, guid
 
 ## 安装
 
-### 方式一：skills CLI
+### 方式一：skills CLI（推荐）
+
+自动识别当前 runtime：
 
 ```bash
-npx skills add youmeng96/codex-skill-mentor -a codex
+npx skills add youmeng96/codex-skill-mentor -g
 ```
+
+也可以显式指定 runtime：
+
+```bash
+npx skills add youmeng96/codex-skill-mentor -g -a codex
+npx skills add youmeng96/codex-skill-mentor -g -a claude-code
+npx skills add youmeng96/codex-skill-mentor -g -a cursor
+# 一次安装到多个 runtime：
+npx skills add youmeng96/codex-skill-mentor -g -a codex claude-code cursor
+```
+
+`-g` 安装到用户级；不写 `-g` 则在当前项目安装。
 
 ### 方式二：手动安装
 
@@ -39,12 +59,24 @@ Windows PowerShell：
 git clone https://github.com/youmeng96/codex-skill-mentor.git "$HOME\.codex\skills\codex-skill-mentor"
 ```
 
-安装后重新打开 Codex 任务，让 Skill 被重新扫描。
+安装后重新打开对应的 AI runtime，让 Skill 被重新扫描。
+
+## 跨 AI Runtime
+
+| Runtime | 典型安装目录 |
+|---|---|
+| Codex | `~/.codex/skills/codex-skill-mentor/` |
+| Claude Code | `~/.claude/skills/codex-skill-mentor/` |
+| Cursor | `~/.cursor/skills/codex-skill-mentor/` |
+| OpenClaw | `~/.openclaw/workspace/skills/codex-skill-mentor/` |
+| DeepSeek Harness | `~/.dsh/skills/codex-skill-mentor/` |
+
+`SKILL.md` 是跨 runtime 的共同入口。`agents/openai.yaml` 只提供 Codex UI 元数据，其他 runtime 可以忽略。详细说明见 [`references/runtime-compatibility.md`](references/runtime-compatibility.md)。
 
 ## 快速开始
 
 ```text
-Use $codex-skill-mentor to help me build a skill that turns meeting notes into action items.
+Use codex-skill-mentor to help me build a skill that turns meeting notes into action items.
 ```
 
 也可以直接说：
@@ -95,6 +127,7 @@ codex-skill-mentor/
 │   ├── curriculum.md
 │   ├── evaluation-rubric.md
 │   ├── forward-test-results.md
+│   ├── runtime-compatibility.md
 │   └── sources.md
 ├── assets/
 │   ├── hero-preview.png
@@ -106,6 +139,7 @@ codex-skill-mentor/
 ├── tests/test_validate_skill.py
 ├── test-prompts.json
 ├── README.md
+├── README_EN.md
 ├── CHANGELOG.md
 └── LICENSE
 ```

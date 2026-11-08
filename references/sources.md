@@ -6,6 +6,8 @@
 
 - OpenAI bundled `skill-creator`：Skill 目录、frontmatter、渐进披露、验证和前向测试的主要结构依据。
 - Codex Skills 文档入口：https://developers.openai.com/codex/skills/
+- Agent Skills 标准：https://agentskills.io
+- skills CLI（跨 runtime 安装）：https://github.com/vercel-labs/skills
 
 ## 方法论参考
 

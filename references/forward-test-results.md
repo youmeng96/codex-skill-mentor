@@ -72,3 +72,18 @@
 - 单元测试：6/6 通过。
 - 独立前向测试：PASS。
 - 仍需在真实 GitHub 仓库地址确定后替换占位符并做干净安装测试。
+## 测试 5：其他 AI runtime
+
+用户请求：
+
+> 我是 Claude Code 用户，能教我用同样的方式创建 Skill 吗？
+
+期望行为：
+
+- 确认目标 runtime 和 Skill 扫描目录。
+- 保留 `SKILL.md`、`name` 和 `description` 的通用结构。
+- 说明 `agents/openai.yaml` 只影响 Codex UI。
+- 使用 `<skill-root>` 和 runtime 对应路径，不假设 Codex 专属环境。
+- 运行结构验证、单元测试和一次目标 runtime 的真实请求。
+
+结果：通过。跨 runtime 说明位于 `references/runtime-compatibility.md`。

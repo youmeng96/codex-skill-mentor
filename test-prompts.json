@@ -18,5 +18,10 @@
     "id": 4,
     "prompt": "解释一下什么是 description，不要帮我做文件。",
     "expected": "只解释 description 的路由作用，用当前场景给一个短例子，不倾倒完整课程，也不创建文件。"
+  },
+  {
+    "prompt": "我是 Claude Code 用户，能教我用同样的方式创建 Skill 吗？",
+    "expected": "确认目标 runtime 和其 Skill 扫描目录，保留 SKILL.md/name/description 的通用结构，说明 agents/openai.yaml 只影响 Codex UI，并给出跨 runtime 的验证步骤。",
+    "id": 5
   }
 ]
